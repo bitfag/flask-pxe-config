@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+<form action="{{ url_for('generate') }}" method=post>
+    MAC: <input type=text size=30 name=MAC>
+    rbd device: <input type=text size=30 name="rbd device">
+    <input type=submit value=Submit>
+</form>
+{% endblock %}
